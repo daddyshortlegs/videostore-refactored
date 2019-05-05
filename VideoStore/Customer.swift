@@ -27,7 +27,8 @@ public class Customer {
                     var movie = RegularMovie()
                     thisAmount = movie.determineAmount(daysRented: daysRented);
                 case Rental.NEW_RELEASE:
-                    thisAmount += Double(daysRented) * 3
+                    var movie = NewMovie()
+                    thisAmount = movie.determineAmount(daysRented: daysRented)
                 case Rental.CHILDRENS:
                     thisAmount += 1.5
                     if daysRented > 3 {
