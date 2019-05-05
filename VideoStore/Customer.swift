@@ -17,23 +17,23 @@ public class Customer {
         
         var result = "Rental Record for " + getName() + "\n";
     
-        var index = 0
         for rental in rentals {
             var thisAmount: Double = 0;
     
+            var daysRented = rental.getDaysRented()
             // determines the amount for each line
             switch rental.getPriceCode() {
                 case Rental.REGULAR:
                     thisAmount += 2;
-                    if rental.getDaysRented() > 2 {
-                        thisAmount += Double(rental.getDaysRented() - 2) * 1.5
+                    if daysRented > 2 {
+                        thisAmount += Double(daysRented - 2) * 1.5
                     }
                 case Rental.NEW_RELEASE:
-                    thisAmount += Double(rental.getDaysRented()) * 3
+                    thisAmount += Double(daysRented) * 3
                 case Rental.CHILDRENS:
                     thisAmount += 1.5
-                    if rental.getDaysRented() > 3 {
-                        thisAmount += Double(rental.getDaysRented() - 3) * 1.5
+                    if daysRented > 3 {
+                        thisAmount += Double(daysRented - 3) * 1.5
                     }
                 default:
                     break
@@ -48,7 +48,6 @@ public class Customer {
     
             result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
             totalAmount += thisAmount;
-            index+=1
         }
     
         result += "You owed " + String(totalAmount) + "\n";
