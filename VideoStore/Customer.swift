@@ -30,10 +30,8 @@ public class Customer {
                     var movie = NewMovie()
                     thisAmount = movie.determineAmount(daysRented: daysRented)
                 case Rental.CHILDRENS:
-                    thisAmount += 1.5
-                    if daysRented > 3 {
-                        thisAmount += Double(daysRented - 3) * 1.5
-                    }
+                    var movie = ChildrensMovie()
+                    thisAmount = movie.determineAmount(daysRented: daysRented)
                 default:
                     break
             }

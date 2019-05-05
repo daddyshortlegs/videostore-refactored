@@ -14,6 +14,7 @@
 		A15B50A6227F736400E0988B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B50A5227F736400E0988B /* Customer.swift */; };
 		A1A7AE53227F8778009395E0 /* RegularMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7AE52227F8778009395E0 /* RegularMovie.swift */; };
 		A1A7AE55227F87F7009395E0 /* NewMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7AE54227F87F7009395E0 /* NewMovie.swift */; };
+		A1A7AE57227F888F009395E0 /* ChildrensMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7AE56227F888F009395E0 /* ChildrensMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		A15B50A5227F736400E0988B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		A1A7AE52227F8778009395E0 /* RegularMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularMovie.swift; sourceTree = "<group>"; };
 		A1A7AE54227F87F7009395E0 /* NewMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMovie.swift; sourceTree = "<group>"; };
+		A1A7AE56227F888F009395E0 /* ChildrensMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrensMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A15B50A5227F736400E0988B /* Customer.swift */,
 				A1A7AE52227F8778009395E0 /* RegularMovie.swift */,
 				A1A7AE54227F87F7009395E0 /* NewMovie.swift */,
+				A1A7AE56227F888F009395E0 /* ChildrensMovie.swift */,
 			);
 			path = VideoStore;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15B50A6227F736400E0988B /* Customer.swift in Sources */,
+				A1A7AE57227F888F009395E0 /* ChildrensMovie.swift in Sources */,
 				A1A7AE53227F8778009395E0 /* RegularMovie.swift in Sources */,
 				A15B50A2227F715400E0988B /* Rental.swift in Sources */,
 				A1A7AE55227F87F7009395E0 /* NewMovie.swift in Sources */,
