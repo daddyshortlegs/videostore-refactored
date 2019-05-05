@@ -22,15 +22,15 @@ public class Customer {
             var thisAmount: Double = 0;
     
             // determines the amount for each line
-            switch rental.getMovie().getPriceCode() {
-                case Movie.REGULAR:
+            switch rental.getPriceCode() {
+                case Rental.REGULAR:
                     thisAmount += 2;
                     if rental.getDaysRented() > 2 {
                         thisAmount += Double(rental.getDaysRented() - 2) * 1.5
                     }
-                case Movie.NEW_RELEASE:
+                case Rental.NEW_RELEASE:
                     thisAmount += Double(rental.getDaysRented()) * 3
-                case Movie.CHILDRENS:
+                case Rental.CHILDRENS:
                     thisAmount += 1.5
                     if rental.getDaysRented() > 3 {
                         thisAmount += Double(rental.getDaysRented() - 3) * 1.5
@@ -41,13 +41,12 @@ public class Customer {
     
             frequentRenterPoints+=1;
     
-            if rental.getMovie().getPriceCode() == Movie.NEW_RELEASE
+            if rental.getPriceCode() == Rental.NEW_RELEASE
                 && rental.getDaysRented() > 1 {
                 frequentRenterPoints+=1;
             }
     
-            result += "\t" + rental.getMovie().getTitle() + "\t"
-                + String(thisAmount) + "\n";
+            result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
             totalAmount += thisAmount;
             index+=1
         }

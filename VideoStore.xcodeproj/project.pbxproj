@@ -11,7 +11,6 @@
 		A15B5096227F6F9A00E0988B /* VideoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B5095227F6F9A00E0988B /* VideoStoreTests.swift */; };
 		A15B5098227F6F9A00E0988B /* VideoStore.h in Headers */ = {isa = PBXBuildFile; fileRef = A15B508A227F6F9900E0988B /* VideoStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A15B50A2227F715400E0988B /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B50A1227F715400E0988B /* Rental.swift */; };
-		A15B50A4227F71D000E0988B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B50A3227F71D000E0988B /* Movie.swift */; };
 		A15B50A6227F736400E0988B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B50A5227F736400E0988B /* Customer.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		A15B5095227F6F9A00E0988B /* VideoStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStoreTests.swift; sourceTree = "<group>"; };
 		A15B5097227F6F9A00E0988B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15B50A1227F715400E0988B /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
-		A15B50A3227F71D000E0988B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A15B50A5227F736400E0988B /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 				A15B508A227F6F9900E0988B /* VideoStore.h */,
 				A15B508B227F6F9900E0988B /* Info.plist */,
 				A15B50A1227F715400E0988B /* Rental.swift */,
-				A15B50A3227F71D000E0988B /* Movie.swift */,
 				A15B50A5227F736400E0988B /* Customer.swift */,
 			);
 			path = VideoStore;
@@ -205,7 +202,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15B50A6227F736400E0988B /* Customer.swift in Sources */,
-				A15B50A4227F71D000E0988B /* Movie.swift in Sources */,
 				A15B50A2227F715400E0988B /* Rental.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
