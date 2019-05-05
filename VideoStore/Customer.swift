@@ -18,23 +18,22 @@ public class Customer {
         var result = "Rental Record for " + getName() + "\n";
     
         var index = 0
-        while index < rentals.count {
+        for rental in rentals {
             var thisAmount: Double = 0;
-            var each = rentals[index]
     
             // determines the amount for each line
-            switch each.getMovie().getPriceCode() {
+            switch rental.getMovie().getPriceCode() {
                 case Movie.REGULAR:
                     thisAmount += 2;
-                    if (each.getDaysRented() > 2) {
-                        thisAmount += Double(each.getDaysRented() - 2) * 1.5
+                    if rental.getDaysRented() > 2 {
+                        thisAmount += Double(rental.getDaysRented() - 2) * 1.5
                     }
                 case Movie.NEW_RELEASE:
-                    thisAmount += Double(each.getDaysRented()) * 3
+                    thisAmount += Double(rental.getDaysRented()) * 3
                 case Movie.CHILDRENS:
                     thisAmount += 1.5
-                    if (each.getDaysRented() > 3) {
-                        thisAmount += Double(each.getDaysRented() - 3) * 1.5
+                    if rental.getDaysRented() > 3 {
+                        thisAmount += Double(rental.getDaysRented() - 3) * 1.5
                     }
                 default:
                     break
@@ -42,12 +41,12 @@ public class Customer {
     
             frequentRenterPoints+=1;
     
-            if each.getMovie().getPriceCode() == Movie.NEW_RELEASE
-                && each.getDaysRented() > 1 {
+            if rental.getMovie().getPriceCode() == Movie.NEW_RELEASE
+                && rental.getDaysRented() > 1 {
                 frequentRenterPoints+=1;
             }
     
-            result += "\t" + each.getMovie().getTitle() + "\t"
+            result += "\t" + rental.getMovie().getTitle() + "\t"
                 + String(thisAmount) + "\n";
             totalAmount += thisAmount;
             index+=1
