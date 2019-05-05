@@ -24,10 +24,8 @@ public class Customer {
             // determines the amount for each line
             switch rental.getPriceCode() {
                 case Rental.REGULAR:
-                    thisAmount += 2;
-                    if daysRented > 2 {
-                        thisAmount += Double(daysRented - 2) * 1.5
-                    }
+                    var movie = RegularMovie()
+                    thisAmount = movie.determineAmount(daysRented: daysRented);
                 case Rental.NEW_RELEASE:
                     thisAmount += Double(daysRented) * 3
                 case Rental.CHILDRENS:
