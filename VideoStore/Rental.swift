@@ -28,5 +28,9 @@ public class Rental {
     public func determineAmount(daysRented: Int) -> Double {
         return 0
     }
+    
+    public func getFrequentRenterPoints() -> Int {
+        return 1
+    }
 }
 

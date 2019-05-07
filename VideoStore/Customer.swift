@@ -18,17 +18,8 @@ public class Customer {
         var result = "Rental Record for " + getName() + "\n";
     
         for rental in rentals {
-            var thisAmount: Double = 0;
-    
-            var daysRented = rental.getDaysRented()
-            thisAmount = rental.determineAmount(daysRented: daysRented);
-    
-            frequentRenterPoints+=1;
-    
-            if rental.getPriceCode() == Rental.NEW_RELEASE
-                && rental.getDaysRented() > 1 {
-                frequentRenterPoints+=1;
-            }
+            let thisAmount = rental.determineAmount(daysRented: rental.getDaysRented())
+            frequentRenterPoints += rental.getFrequentRenterPoints()
     
             result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
             totalAmount += thisAmount;

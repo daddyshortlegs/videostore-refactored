@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A11DDFE722822462008B1662 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DDFE622822462008B1662 /* Statement.swift */; };
 		A15B5091227F6F9A00E0988B /* VideoStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15B5087227F6F9900E0988B /* VideoStore.framework */; };
 		A15B5096227F6F9A00E0988B /* VideoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B5095227F6F9A00E0988B /* VideoStoreTests.swift */; };
 		A15B5098227F6F9A00E0988B /* VideoStore.h in Headers */ = {isa = PBXBuildFile; fileRef = A15B508A227F6F9900E0988B /* VideoStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,7 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A11DDFE622822462008B1662 /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
 		A15B5087227F6F9900E0988B /* VideoStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VideoStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15B508A227F6F9900E0988B /* VideoStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoStore.h; sourceTree = "<group>"; };
 		A15B508B227F6F9900E0988B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				A1A7AE52227F8778009395E0 /* RegularMovie.swift */,
 				A1A7AE54227F87F7009395E0 /* NewMovie.swift */,
 				A1A7AE56227F888F009395E0 /* ChildrensMovie.swift */,
-				A11DDFE622822462008B1662 /* Statement.swift */,
 			);
 			path = VideoStore;
 			sourceTree = "<group>";
@@ -216,7 +213,6 @@
 				A15B50A6227F736400E0988B /* Customer.swift in Sources */,
 				A1A7AE57227F888F009395E0 /* ChildrensMovie.swift in Sources */,
 				A1A7AE53227F8778009395E0 /* RegularMovie.swift in Sources */,
-				A11DDFE722822462008B1662 /* Statement.swift in Sources */,
 				A15B50A2227F715400E0988B /* Rental.swift in Sources */,
 				A1A7AE55227F87F7009395E0 /* NewMovie.swift in Sources */,
 			);
