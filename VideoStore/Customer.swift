@@ -1,4 +1,7 @@
 public class Customer {
+    private var name: String
+    private var rentals: [Rental] = []
+
     public init(name: String) {
         self.name = name
     }
@@ -12,7 +15,6 @@ public class Customer {
     }
     
     public func statement() -> String {
-        var totalAmount: Double = 0
         var frequentRenterPoints: Int = 0;
         
         var result = "Rental Record for " + getName() + "\n";
@@ -22,16 +24,19 @@ public class Customer {
             frequentRenterPoints += rental.getFrequentRenterPoints()
     
             result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
-            totalAmount += thisAmount;
         }
-    
-        result += "You owed " + String(totalAmount) + "\n";
+
+        result += "You owed " + String(calculateTotal()) + "\n";
         result += "You earned " + String(frequentRenterPoints) + " frequent renter points\n";
         
         return result;
     }
     
-    
-    private var name: String
-    private var rentals: [Rental] = []
+    func calculateTotal() -> Double {
+        var total: Double = 0
+        for rental in rentals {
+            total += rental.determineAmount(daysRented: rental.getDaysRented())
+        }
+        return total
+    }
 }
