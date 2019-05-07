@@ -4,10 +4,10 @@ class RegularMovie : Rental {
         super.init(title: title, priceCode: Rental.REGULAR, daysRented: daysRented)
     }
 
-    override func determineAmount(daysRented: Int) -> Double {
+    override func determineAmount() -> Double {
         var thisAmount: Double = 2
-        if daysRented > 2 {
-            thisAmount += Double(daysRented - 2) * 1.5
+        if getDaysRented() > 2 {
+            thisAmount += Double(getDaysRented() - 2) * 1.5
         }
         return thisAmount
     }

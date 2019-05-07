@@ -18,7 +18,7 @@ public class Customer {
         var result = "Rental Record for " + getName() + "\n";
     
         for rental in rentals {
-            let thisAmount = rental.determineAmount(daysRented: rental.getDaysRented())
+            let thisAmount = rental.determineAmount()
             result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
         }
 
@@ -31,7 +31,7 @@ public class Customer {
     func calculateTotal() -> Double {
         var total: Double = 0
         for rental in rentals {
-            total += rental.determineAmount(daysRented: rental.getDaysRented())
+            total += rental.determineAmount()
         }
         return total
     }
@@ -39,7 +39,8 @@ public class Customer {
     func calculateFrequentRenterPoints() -> Int {
         var total = 0
         for rental in rentals {
-            total += rental.getFrequentRenterPoints()        }
+            total += rental.getFrequentRenterPoints()
+        }
         return total
     }
 

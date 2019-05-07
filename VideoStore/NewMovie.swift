@@ -4,8 +4,8 @@ class NewMovie : Rental {
         super.init(title: title, priceCode: Rental.NEW_RELEASE, daysRented: daysRented)
     }
     
-    override func determineAmount(daysRented: Int) -> Double {
-        return Double(daysRented) * 3
+    override func determineAmount() -> Double {
+        return Double(getDaysRented()) * 3
     }
     
     override func getFrequentRenterPoints() -> Int {

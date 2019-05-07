@@ -25,7 +25,7 @@ public class Rental {
         return daysRented
     }
     
-    public func determineAmount(daysRented: Int) -> Double {
+    public func determineAmount() -> Double {
         return 0
     }
     
