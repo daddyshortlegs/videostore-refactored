@@ -24,5 +24,9 @@ public class Rental {
     public func getDaysRented() -> Int {
         return daysRented
     }
+    
+    public func determineAmount(daysRented: Int) -> Double {
+        return 0
+    }
 }
 

@@ -21,20 +21,7 @@ public class Customer {
             var thisAmount: Double = 0;
     
             var daysRented = rental.getDaysRented()
-            // determines the amount for each line
-            switch rental.getPriceCode() {
-                case Rental.REGULAR:
-                    var movie = RegularMovie()
-                    thisAmount = movie.determineAmount(daysRented: daysRented);
-                case Rental.NEW_RELEASE:
-                    var movie = NewMovie()
-                    thisAmount = movie.determineAmount(daysRented: daysRented)
-                case Rental.CHILDRENS:
-                    var movie = ChildrensMovie()
-                    thisAmount = movie.determineAmount(daysRented: daysRented)
-                default:
-                    break
-            }
+            thisAmount = rental.determineAmount(daysRented: daysRented);
     
             frequentRenterPoints+=1;
     
