@@ -15,19 +15,15 @@ public class Customer {
     }
     
     public func statement() -> String {
-        var frequentRenterPoints: Int = 0;
-        
         var result = "Rental Record for " + getName() + "\n";
     
         for rental in rentals {
             let thisAmount = rental.determineAmount(daysRented: rental.getDaysRented())
-            frequentRenterPoints += rental.getFrequentRenterPoints()
-    
             result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
         }
 
         result += "You owed " + String(calculateTotal()) + "\n";
-        result += "You earned " + String(frequentRenterPoints) + " frequent renter points\n";
+        result += "You earned " + String(calculateFrequentRenterPoints()) + " frequent renter points\n";
         
         return result;
     }
@@ -39,4 +35,12 @@ public class Customer {
         }
         return total
     }
+    
+    func calculateFrequentRenterPoints() -> Int {
+        var total = 0
+        for rental in rentals {
+            total += rental.getFrequentRenterPoints()        }
+        return total
+    }
+
 }
