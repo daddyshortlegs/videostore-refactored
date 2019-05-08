@@ -15,17 +15,28 @@ public class Customer {
     }
     
     public func statement() -> String {
-        var result = "Rental Record for " + getName() + "\n";
-    
-        for rental in rentals {
-            let thisAmount = rental.determineAmount()
-            result += "\t" + rental.getTitle() + "\t" + String(thisAmount) + "\n";
-        }
-
-        result += "You owed " + String(calculateTotal()) + "\n";
-        result += "You earned " + String(calculateFrequentRenterPoints()) + " frequent renter points\n";
-        
+        var result = createHeader()
+        result += createBody()
+        result += createFooter()
         return result;
+    }
+    
+    func createHeader() -> String {
+        return "Rental Record for " + getName() + "\n"
+    }
+    
+    func createBody() -> String {
+        var result = ""
+        for rental in rentals {
+            result += "\t" + rental.getTitle() + "\t" + String(rental.determineAmount()) + "\n";
+        }
+        return result
+    }
+
+    func createFooter() -> String {
+        var result = "You owed " + String(calculateTotal()) + "\n";
+        result += "You earned " + String(calculateFrequentRenterPoints()) + " frequent renter points\n";
+        return result
     }
     
     func calculateTotal() -> Double {
