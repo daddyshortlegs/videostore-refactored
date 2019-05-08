@@ -13,12 +13,7 @@ class Customer {
     func getName() -> String {
         return name
     }
-    
-    func statement() -> String {
-        let statement = Statement(customer: self)
-        return statement.print()
-    }
-    
+        
     func getRentals() -> [Rental] {
         return rentals
     }
