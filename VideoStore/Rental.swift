@@ -1,25 +1,25 @@
-public class Rental {
+class Rental {
     private var daysRented: Int
     private var title: String
 
-    public init(title: String, daysRented: Int) {
+    init(title: String, daysRented: Int) {
         self.title = title;
         self.daysRented = daysRented
     }
     
-    public func getTitle() -> String {
+    func getTitle() -> String {
         return title;
     }
 
-    public func getDaysRented() -> Int {
+    func getDaysRented() -> Int {
         return daysRented
     }
     
-    public func determineAmount() -> Double {
+    func determineAmount() -> Double {
         return 0
     }
     
-    public func getFrequentRenterPoints() -> Int {
+    func getFrequentRenterPoints() -> Int {
         return 1
     }
 }
