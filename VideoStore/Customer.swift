@@ -22,20 +22,20 @@ public class Customer {
     }
     
     func createHeader() -> String {
-        return "Rental Record for " + getName() + "\n"
+        return "Rental Record for \(getName())\n"
     }
     
     func createBody() -> String {
         var result = ""
         for rental in rentals {
-            result += "\t" + rental.getTitle() + "\t" + String(rental.determineAmount()) + "\n";
+            result += "\t\(rental.getTitle())\t\(String(rental.determineAmount()))\n";
         }
         return result
     }
 
     func createFooter() -> String {
-        var result = "You owed " + String(calculateTotal()) + "\n";
-        result += "You earned " + String(calculateFrequentRenterPoints()) + " frequent renter points\n";
+        var result = "You owed \(String(calculateTotal()))\n"
+        result += "You earned \(String(calculateFrequentRenterPoints())) frequent renter points\n"
         return result
     }
     
