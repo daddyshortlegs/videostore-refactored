@@ -17,16 +17,16 @@ class Statement {
     }
     
     func createBody() -> String {
-        var result = ""
-        for rental in customer.getRentals() {
-            result += "\t\(rental.getTitle())\t\(String(rental.determineAmount()))\n";
-        }
-        return result
+        return customer.getRentals().reduce("") { $0 + createRow($1) }
+    }
+    
+    func createRow(_ rental: Rental) -> String {
+        return "\t\(rental.getTitle())\t\(rental.determineAmount())\n"
     }
     
     func createFooter() -> String {
-        var result = "You owed \(String(calculateTotal()))\n"
-        result += "You earned \(String(calculateFrequentRenterPoints())) frequent renter points\n"
+        var result = "You owed \(calculateTotal())\n"
+        result += "You earned \(calculateFrequentRenterPoints()) frequent renter points\n"
         return result
     }
     
