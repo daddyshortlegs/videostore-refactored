@@ -6,10 +6,7 @@ class Statement {
     }
     
     func print() -> String {
-        var result = createHeader()
-        result += createBody()
-        result += createFooter()
-        return result;
+        return createHeader() + createBody() + createFooter()
     }
     
     func createHeader() -> String {
@@ -25,9 +22,8 @@ class Statement {
     }
     
     func createFooter() -> String {
-        var result = "You owed \(calculateTotal())\n"
-        result += "You earned \(calculateFrequentRenterPoints()) frequent renter points\n"
-        return result
+        return "You owed \(calculateTotal())\n"
+            + "You earned \(calculateFrequentRenterPoints()) frequent renter points\n"
     }
     
     func calculateTotal() -> Double {
