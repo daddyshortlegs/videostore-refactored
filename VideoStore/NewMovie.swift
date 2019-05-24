@@ -1,15 +1,6 @@
 class NewMovie : Rental {
-    
     override func rentalLimit() -> Int {
         return 0
-    }
-
-    override func determineAmount() -> Double {
-        var thisAmount = initialCost()
-        if getDaysRented() > rentalLimit() {
-            thisAmount += Double(getDaysRented() - rentalLimit()) * multiplier()
-        }
-        return thisAmount
     }
 
     override func getFrequentRenterPoints() -> Int {
@@ -19,5 +10,4 @@ class NewMovie : Rental {
     override func multiplier() -> Double {
         return 3
     }
-
 }

@@ -11,6 +11,14 @@ class Rental {
         return title;
     }
 
+    func determineAmount() -> Double {
+        var thisAmount = initialCost()
+        if getDaysRented() > rentalLimit() {
+            thisAmount += Double(getDaysRented() - rentalLimit()) * multiplier()
+        }
+        return thisAmount
+    }
+
     func initialCost() -> Double {
         return 0
     }
@@ -24,10 +32,6 @@ class Rental {
     }
     
     func rentalLimit() -> Int {
-        return 0
-    }
-
-    func determineAmount() -> Double {
         return 0
     }
     
